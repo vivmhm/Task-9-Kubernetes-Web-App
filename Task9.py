@@ -10,10 +10,11 @@ cmd = f.getvalue("x")
 
 cmd = cmd.lower()
 chklstr = cmd.split()
-
-chkstr=["k8s","kubernetes","provide","for","just","up","me","my","to","or","plzz","please","do","using",      "is","which","whose","has","can","could","pods","pod","you","u","port","number","no.","deployment","hi","a",
-",","no","with","the","all","having","name","named","hello","hey","display","print","of","upto","deployments",
-"image"]
+chkstr = [ "build","generate","deploy","can","you","get","a","pods","for","me","please","normal","pod", 
+"show","the","again","create","with","deployment","deployments","normal","one","scale","list","destroy",
+"scale up","scale down","decrease","increase","is","which","whose","has","can","could","more","remove",
+"delete","detach","name","everything","test2","again","in","test","describe","k8s","kubernetes","services",
+"svc","replica","expose","launch" ]
 
 for i in range(0,len(chklstr)):
 	if chklstr[i] in chkstr:

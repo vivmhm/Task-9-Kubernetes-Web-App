@@ -1,0 +1,57 @@
+<script>
+function run(){
+    var command  = document.getElementById("com").value
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://192.168.122.1/cgi-bin/Task9.py?x=" + command, true);
+    xhr.send();
+    xhr.onload = function (){
+    var out = xhr.responseText;
+  document.getElementById("out").innerHTML=out;
+    }
+    }
+</script>
+
+<html>
+<body>
+
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="images/logo1.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="http://192.168.122.1/Task9/Task9.html">Home</a></li>
+                    <li><a href="http://192.168.122.1/Task9/Task9.html">Run kube Commands Below</a></li>
+                    <li><a href="http://192.168.122.1/Task9/Task9.html">Task-9 </a></li>
+                    <li><a href="http://192.168.122.1/Task7/Task7.html">Task-7 Linux-World Summer-Internship-2021</a>
+                </ul>
+            </div>
+        </nav>
+
+
+    <title>Web Application For Kubernetes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <section class="header">
+    <center><h1><i>Kubernetes</i></h1></center>
+    <center><p>The best orchestration tool. Also called as K8s</p></center>
+    <center><div class="input-group">
+        <input type="text" id='com' class="form-control" style="height:150px;font-size:14pt;" placeholder="Search for kubes" size=50></center>
+    <!--<div class="input-group-append"></div>  -->
+    <center><button type="submit" onclick="run()"  class="input-group-append" style="height:50px;font-size:14pt;" >Execute</button></center>
+    </div>
+    </div>
+<div class="output">
+    <h2>Results</h2>
+</div>
+<pre>
+    <div class="Search-Results" id='out'>
+    </div>
+</pre>
+
+</section>
+</body>
+</html>
+
+
